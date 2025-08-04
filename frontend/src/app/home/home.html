@@ -1,0 +1,52 @@
+<div class="main_container">
+    <nav class="nav_bar">
+        <h2>NONPROFIT CHECKER</h2>
+    </nav>
+    <div class="body_section">
+        <div class="form_container">
+            <div class="form-section">
+                <form [formGroup]="einGroup" (ngSubmit)="getNonProfit()">
+                    <label>EIN</label>
+                    <input type="text" placeholder="EIN" formControlName="ein"/>
+                    <button class="search">
+                        <span *ngIf="!isSpinner">Search</span>
+                        <div class="spinner" *ngIf="isSpinner"></div>
+                    </button>
+                </form>
+            </div>
+            <div class="results_section" *ngIf="result">
+                <div class="result_card">
+                  <h3>{{ result?.organization_name }}</h3> 
+                  <p class="ein">EIN: {{ result?.ein }}</p>
+                  <p class="address">
+                    {{ result?.address_line1 }}, {{ result?.city }},
+                    {{ result?.state }} {{ result?.zip }}
+                  </p>
+            
+                  <div class="status_flags">
+                    <div class="status" [class.active]="result?.bmf_status">
+                      BMF Status: {{ result?.bmf_status ? 'Active' : 'Inactive' }}
+                    </div>
+                    <div class="status" [class.active]="result?.pub78_verified">
+                      PUB78 Verified: {{ result?.pub78_verified ? 'Yes' : 'No' }}
+                    </div>
+                  </div>
+            
+                  <p><strong>Subsection:</strong> {{ result?.subsection_description }}</p>
+                  <p>
+                    <strong>Foundation Type:</strong>
+                    {{ result?.foundation_type_description }}
+                  </p>
+                  <p class="ofac_status">
+                    <strong>OFAC Status:</strong> {{ result?.ofac_status }}
+                  </p>
+                  <small>Last Updated: {{ result?.organization_info_last_modified }}</small>
+                </div>
+              </div>
+            
+            <div class="not_found" *ngIf="notFound">
+              <h2>Not found</h2>
+            </div>
+        </div>
+    </div>
+</div>

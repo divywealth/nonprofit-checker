@@ -1,0 +1,58 @@
+.main_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  .login_container {
+    border: solid grey 1px;
+    border-radius: 10px;
+    padding: 40px;
+  }
+  .non_profit {
+    color: green;
+    font-family: sans-serif;
+    font-size: 20px;
+  }
+  .welcome {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 17px;
+  }
+  .form_group {
+    margin-bottom: 20px;
+  }
+  .form_group label {
+    font-family: sans-serif;
+    font-size: 12px;
+  }
+  .form_group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid;
+  }
+  .sign_in {
+    color: green;
+  }
+  .password_wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .password_wrapper input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid;
+  }
+  .password_wrapper span {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    font-weight: bold;
+  }
+  

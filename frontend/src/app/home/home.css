@@ -1,0 +1,141 @@
+.main_container {
+  height: 100vh;
+}
+
+.nav_bar {
+  border-bottom: solid grey 1px;
+}
+.nav_bar h2 {
+  color: green;
+  text-align: center;
+  font-family: sans-serif;
+}
+.body_section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form_container {
+  box-shadow: 0px 0px 4px 0px;
+  padding: 20px;
+  width: 450px;
+}
+.form_container form {
+}
+.form_container form input {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.form_container form button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+.search{
+  display: flex;
+  justify-content: center;
+}
+.result_container {
+}
+.not_found {
+    color: green;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.results_section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .result_card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 450px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .result_card h3 {
+    color: green;
+    margin-bottom: 5px;
+  }
+  
+  .result_card .ein {
+    font-weight: bold;
+  }
+  
+  .result_card .status_flags {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: #ffcccc;
+    font-weight: bold;
+  }
+  
+  .status.active {
+    background: #ccffcc;
+  }
+  
+  .ofac_status {
+    margin-top: 10px;
+    font-style: italic;
+  }
+  .spinner {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid green; /* Spinner color */
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @media (max-width: 600px) {
+    .form_container,
+    .result_card {
+      padding: 15px;
+      width: 300px;
+    }
+
+    .result_card {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        width: 300px;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+      }
+  
+    .nav_bar h2 {
+      font-size: 1.2rem;
+    }
+  
+    .status_flags {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .status {
+      font-size: 0.85rem;
+    }
+  }

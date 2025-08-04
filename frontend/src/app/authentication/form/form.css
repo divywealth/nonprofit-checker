@@ -1,0 +1,59 @@
+.form_group {
+  margin-bottom: 20px;
+}
+.form_group label {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+.form_group input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+.sign_in {
+  color: green;
+}
+.password_wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.password_wrapper input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+.password_wrapper span {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  font-weight: bold;
+}
+.proceed {
+  width: 100%;
+  background-color: green;
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.spinner {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid green; /* Spinner color */
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

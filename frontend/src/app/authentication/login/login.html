@@ -1,0 +1,15 @@
+<div class="main_container">
+    <div class="login_container">
+      <p class="non_profit">NONPROFIT CHECKER</p>
+      <h2 class="welcome">Welcome Back</h2>
+  
+      <app-form 
+        buttonText="Sign in"
+        [formGroup]="loginForm"
+        (submitForm)="handleLogin()"
+        [isSpinner]="isSpinner"
+      ></app-form>
+      <div>Don't have an aaccount <span class="sign_in"><a routerLink="/register">sign up</a></span></div>
+    </div>
+  </div>
+  

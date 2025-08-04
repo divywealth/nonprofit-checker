@@ -1,0 +1,29 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <div class="form_group">
+      <label>Name</label>
+      <input
+        type="text"
+        formControlName="name"
+        placeholder="Enter your name"
+        required
+      />
+    </div>
+    <div class="form_group">
+      <label>Password</label>
+      <div class="password_wrapper">
+        <input
+          [type]="showPassword ? 'show-password' : 'password'"
+          formControlName="password"
+          placeholder="Password"
+          required
+        />
+        <span (click)="togglePassword()"
+          >show</span
+        >
+      </div>
+    </div>
+    <button type="submit" class="proceed">
+      <span *ngIf="!isSpinner">{{buttonText}}</span>
+      <div class="spinner" *ngIf="isSpinner"></div>
+    </button>
+  </form>
